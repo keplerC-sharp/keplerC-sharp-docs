@@ -41,3 +41,44 @@ GIT_USER=<Your GitHub username> yarn deploy
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
 # keplerC-sharp-docs
 # keplerC-sharp-docs
+
+
+#### DOCUMENTATION
+https://gist.github.com/andrescortesdev/6f7cf37dd45e68dac7f78248e0fffb2a
+
+https://tutorialmarkdown.com/guia
+
+### Execute from 0 to deplay with firebase (sudo)
+1. npm 
+```
+npm install
+```
+2. Primero, necesitas instalar la herramienta de línea de comandos de Firebase de forma global:
+```
+npm install -g firebase-tools
+```
+
+3. Este comando nos permite iniciar sesión en Firebase usando nuestra cuenta de Google. Es necesario para poder desplegar el sitio en Firebase Hosting desde tu máquina loca
+```
+firebase login
+```
+
+4. Construye una versión optimizada y lista para producción de tu sitio Docusaurus. El resultado se guarda en la carpeta build/, que será la que Firebase publique
+```.
+npm run build
+```
+
+5. Inicia la configuración de Firebase en tu proyecto. Te guía paso a paso para vincular tu sitio con un proyecto de Firebase y preparar el entorno de despliegue.
+```
+firebase init
+```
+
+6. Este comando despliega tu sitio a Firebase Hosting. Toma el contenido de la carpeta configurada (por defecto build/) y lo publica en la web. Al finalizar, Firebase te mostrará la URL pública donde estará disponible tu sitio.
+```
+firebase deploy
+```
+
+#### Docasaurus URL
+```url
+https://project-firebase-a36d6.web.app
+```
