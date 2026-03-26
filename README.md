@@ -53,32 +53,32 @@ https://tutorialmarkdown.com/guia
 ```
 npm install
 ```
-2. Primero, necesitas instalar la herramienta de línea de comandos de Firebase de forma global:
+2. First, you need to install the Firebase CLI (command-line tool) globally:
 ```
 npm install -g firebase-tools
 ```
 
-3. Este comando nos permite iniciar sesión en Firebase usando nuestra cuenta de Google. Es necesario para poder desplegar el sitio en Firebase Hosting desde tu máquina loca
+3. This command allows you to log in to Firebase using your Google account. It’s required to deploy your site to Firebase Hosting from your local machine:
 ```
 firebase login
 ```
 
-4. Construye una versión optimizada y lista para producción de tu sitio Docusaurus. El resultado se guarda en la carpeta build/, que será la que Firebase publique
+4. Construye una versión optimizada y lista para producción de tu sitio Docusaurus. El resultado se guarda en la carpeta ``build/``, que será la que Firebase publique
 ```.
 npm run build
 ```
 
-5. Inicia la configuración de Firebase en tu proyecto. Te guía paso a paso para vincular tu sitio con un proyecto de Firebase y preparar el entorno de despliegue.
+5. Start the Firebase setup in your project. It will guide you step by step to link your site with a Firebase project and prepare the deployment environment:
 ```
 firebase init
 ```
 
-6. Este comando despliega tu sitio a Firebase Hosting. Toma el contenido de la carpeta configurada (por defecto build/) y lo publica en la web. Al finalizar, Firebase te mostrará la URL pública donde estará disponible tu sitio.
+6. This command deploys your site to Firebase Hosting. It takes the content from the configured folder (by default ``build/``) and publishes it to the web. Once finished, Firebase will show you the public URL where your site is available:
 ```
 firebase deploy
 ```
 
 #### Docasaurus URL
 ```url
-https://project-firebase-a36d6.web.app
+https://keplerc-sharp-docs.web.app/
 ```
