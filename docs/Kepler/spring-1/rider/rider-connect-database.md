@@ -32,7 +32,7 @@
 ![rider connect to database](./../../../../static/screenshots/rider-connect-database-3.png)
 
 - Fill the first two rectangles with this values
-- User: root
-- Password: olcZf7gPUHA0f070IvdCrGtlsO1RHd
+- User: ``YOUR USER``
+- Password: ``YOUR PASSWORD``
 - Click test connection, If it is ok
 - Click (Connect to Database)
