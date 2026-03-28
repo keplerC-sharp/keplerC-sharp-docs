@@ -1,11 +1,32 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 3rem 0 4rem;
   width: 100%;
 }
 
+.featuresHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.featuresHeader h2 {
+  font-family: 'Cinzel', serif;
+  color: var(--kepler-gold, #c9a84c);
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+}
+
+.featuresHeader p {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+
 .featureSvg {
-  height: 200px;
-  width: 200px;
+  height: 160px;
+  width: 160px;
+  filter: drop-shadow(0 2px 10px rgba(201, 168, 76, 0.25));
 }

@@ -1,30 +1,137 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+/* ═══════════════════════════════════════════════════════════
+   KEPLER C# — Johannes Kepler (1571–1630)
+   "Per aspera ad astra" — A través de las dificultades, a las estrellas
+   ═══════════════════════════════════════════════════════════ */
 
-/* You can override the default Infima variables here. */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cinzel:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ─── Light Mode (Parchment & Cosmos) ─── */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-color-primary: #8b5e1a;
+  --ifm-color-primary-dark: #7a5217;
+  --ifm-color-primary-darker: #6e4a14;
+  --ifm-color-primary-darkest: #5a3c10;
+  --ifm-color-primary-light: #9d6b1e;
+  --ifm-color-primary-lighter: #ad7521;
+  --ifm-color-primary-lightest: #c9a84c;
+
+  --ifm-font-family-base: 'EB Garamond', Georgia, serif;
+  --ifm-heading-font-family: 'Cinzel', serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', monospace;
+  --ifm-font-size-base: 17px;
+  --ifm-line-height-base: 1.75;
+
+  --ifm-background-color: #faf6ee;
+  --ifm-background-surface-color: #f5edd8;
+  --ifm-navbar-background-color: #1a0f02;
+  --ifm-navbar-link-color: #e8d5a3;
+  --ifm-navbar-link-hover-color: #c9a84c;
+
+  --kepler-gold: #c9a84c;
+  --kepler-gold-light: #e8d5a3;
+  --kepler-deep-space: #0d1117;
+  --kepler-cosmos: #0f1e35;
+  --kepler-parchment: #faf6ee;
+  --kepler-ink: #2c1810;
+  --kepler-star: #f4d03f;
+
+  --ifm-code-font-size: 90%;
+  --docusaurus-highlighted-code-line-bg: rgba(201, 168, 76, 0.15);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* ─── Dark Mode (Deep Space) ─── */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #c9a84c;
+  --ifm-color-primary-dark: #b8942e;
+  --ifm-color-primary-darker: #a8862a;
+  --ifm-color-primary-darkest: #8b6e22;
+  --ifm-color-primary-light: #d4b86a;
+  --ifm-color-primary-lighter: #dcc47e;
+  --ifm-color-primary-lightest: #e8d5a3;
+
+  --ifm-background-color: #0a0e1a;
+  --ifm-background-surface-color: #0f1525;
+  --ifm-navbar-background-color: #06080f;
+  --ifm-navbar-link-color: #c9a84c;
+
+  --docusaurus-highlighted-code-line-bg: rgba(201, 168, 76, 0.2);
+}
+
+body { font-family: var(--ifm-font-family-base); }
+h1, h2, h3, h4, h5, h6 { font-family: var(--ifm-heading-font-family); letter-spacing: 0.04em; }
+
+/* ─── Navbar ─── */
+.navbar {
+  background: var(--ifm-navbar-background-color);
+  border-bottom: 1px solid var(--kepler-gold);
+  box-shadow: 0 2px 20px rgba(201, 168, 76, 0.15);
+}
+.navbar__title { font-family: 'Cinzel', serif; color: var(--kepler-gold) !important; font-size: 1.15rem; letter-spacing: 0.08em; font-weight: 600; }
+.navbar__link { font-family: 'EB Garamond', serif; font-size: 1rem; letter-spacing: 0.03em; transition: color 0.2s ease; }
+.navbar__link:hover, .navbar__link--active { color: var(--kepler-gold) !important; }
+
+/* ─── Hero Banner ─── */
+.hero--primary {
+  background: linear-gradient(135deg, #06080f 0%, #0d1b2e 40%, #1a0f02 100%);
+  position: relative;
+  overflow: hidden;
+}
+.hero--primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, #e8d5a3 1px, transparent 1px),
+    radial-gradient(circle, #e8d5a3 0.7px, transparent 0.7px),
+    radial-gradient(circle, #e8d5a3 1.2px, transparent 1.2px);
+  background-size: 120px 120px, 80px 80px, 200px 200px;
+  background-position: 10px 15px, 55px 70px, 30px 100px;
+  opacity: 0.35;
+}
+.hero--primary::after {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 350px;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-20deg);
+  pointer-events: none;
+}
+.hero__title { font-family: 'Cinzel', serif !important; font-size: 3.2rem !important; color: var(--kepler-gold) !important; text-shadow: 0 0 30px rgba(201, 168, 76, 0.4); letter-spacing: 0.06em; position: relative; z-index: 1; }
+.hero__subtitle { font-family: 'EB Garamond', serif !important; font-style: italic; font-size: 1.4rem !important; color: var(--kepler-gold-light) !important; opacity: 0.9; position: relative; z-index: 1; }
+.hero .button--secondary {
+  background: transparent;
+  border: 1.5px solid var(--kepler-gold);
+  color: var(--kepler-gold) !important;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+.hero .button--secondary:hover { background: var(--kepler-gold); color: #06080f !important; box-shadow: 0 0 20px rgba(201, 168, 76, 0.5); }
+
+/* ─── Sidebar ─── */
+.menu__link { font-family: 'EB Garamond', serif; font-size: 1rem; }
+.menu__link--active { color: var(--kepler-gold) !important; font-weight: 600; }
+
+/* ─── Docs Content ─── */
+.markdown h1 { border-bottom: 1px solid var(--kepler-gold); padding-bottom: 0.4em; margin-bottom: 1em; }
+.markdown blockquote { border-left: 3px solid var(--kepler-gold); background: rgba(201, 168, 76, 0.05); font-style: italic; }
+code { font-family: 'JetBrains Mono', monospace !important; }
+
+/* ─── Footer ─── */
+.footer { background: #06080f; border-top: 1px solid rgba(201, 168, 76, 0.3); }
+.footer__title { font-family: 'Cinzel', serif; color: var(--kepler-gold); letter-spacing: 0.06em; font-size: 0.85rem; }
+.footer__link-item { font-family: 'EB Garamond', serif; font-size: 1rem; transition: color 0.2s; }
+.footer__link-item:hover { color: var(--kepler-gold); }
+.footer__copyright { font-family: 'EB Garamond', serif; font-style: italic; color: rgba(232, 213, 163, 0.5); font-size: 0.9rem; }
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .hero__title { font-size: 2.2rem !important; }
 }

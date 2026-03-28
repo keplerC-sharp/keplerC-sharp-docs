@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+  <!-- Orbital ellipse (Kepler's first law) -->
+  <ellipse cx="30" cy="30" rx="26" ry="16" fill="none" stroke="#c9a84c" stroke-width="2"/>
+  <!-- Sun at focus -->
+  <circle cx="18" cy="30" r="5" fill="#c9a84c"/>
+  <!-- Planet -->
+  <circle cx="56" cy="30" r="3" fill="#e8d5a3"/>
+  <!-- Stars -->
+  <circle cx="8" cy="10" r="1" fill="#e8d5a3"/>
+  <circle cx="50" cy="8" r="1.5" fill="#e8d5a3"/>
+  <circle cx="45" cy="52" r="1" fill="#e8d5a3"/>
+  <circle cx="12" cy="50" r="1.2" fill="#e8d5a3"/>
+</svg>

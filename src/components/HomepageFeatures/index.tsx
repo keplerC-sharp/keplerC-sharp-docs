@@ -11,32 +11,35 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Primera Ley — Órbitas Elípticas',
+    Svg: require('@site/static/img/kepler_laws.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Los planetas orbitan el Sol en trayectorias elípticas, con el Sol en uno
+        de los dos focos. Así como Kepler redefinió el cosmos, esta documentación
+        redefine tu comprensión de C#.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Segunda Ley — Áreas Iguales',
+    Svg: require('@site/static/img/kepler_orbit.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Una línea que une un planeta con el Sol barre áreas iguales en tiempos
+        iguales. El conocimiento, como los planetas, avanza más rápido cuando
+        está cerca de su fuente de energía.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Tercera Ley — Armonía de las Esferas',
+    Svg: require('@site/static/img/kepler_telescope.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        El cuadrado del período orbital es proporcional al cubo del semieje mayor.
+        La armonía matemática que Kepler descubrió en los cielos vive también en
+        la elegancia de C#.
       </>
     ),
   },
@@ -60,6 +63,10 @@ export default function HomepageFeatures(): ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">
+        <div className={styles.featuresHeader}>
+          <h2>Las Tres Leyes de Kepler</h2>
+          <p>Principios que gobiernan tanto el cosmos como el código</p>
+        </div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
