@@ -152,18 +152,50 @@ server {
 }
 ```
 
-### 7. Final touches
-After finishing the server config, Enable the your nginx configuration with tis command:
+### 7. Enabiling NGinex Config
+After pasting the command for the server, you need to enable the NGinex Configurations with these commands
+
 ```bash
 sudo ln -s /etc/nginx/sites-available/proyecto /etc/nginx/sites-enabled/
 ```
-
-and lastly Remove the default:
+Remove the default:
 ```bash
 sudo rm /etc/nginx/sites-enabled/default
 ```
 
-### 8. Conclution
+Test and reload nginx:
+```bash
+sudo nginx -t
+sudo systemctl reload nginx
+```
+
+### 8. SSL Certificate
+
+After finishing the reloading of NGinex, we now add the SSL Certificate to get the nice URL of "HTTPS"
+
+```bash
+sudo certbot --nginx -d domain.com
+```
+
+Follow prompts:
+
+- Enter email
+- Accept terms
+- Choose redirect → YES
+
+The ssl certificate is valid for a 90 Day perior, but it can be renewed automatically with this command:
+```bash
+sudo certbot renew --dry-run
+```
+
+Note:
+```
+Restarting Nginx after configuration is not mandatory, but it is recommended if any errors occur. The project location is irrelevant; the only critical factor is that the necessary port is free and available.
+```
+
+
+
+### 9. Conclution
 And now we reached the finish line! we now know how to:
 
 ```
@@ -171,4 +203,6 @@ Create a MVC Proyect
 Connect to Docker
 Using the proyect on a external server
 Adding NGinex support
+Adding SSL Certificate 
+Connecting to CertBot
 ```
